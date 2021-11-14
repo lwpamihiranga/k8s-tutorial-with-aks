@@ -12,3 +12,10 @@ terraform {
 provider "azurerm" {
   features {}
 }
+
+# Create a resource group
+resource "azurerm_resource_group" "arg" {
+  name     = "k8sResourceGroup"
+  location = "eastus"
+}
+
