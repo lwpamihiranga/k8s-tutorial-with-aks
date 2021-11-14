@@ -3,10 +3,10 @@ import axios from 'axios';
 
 const Post = () => {
   // use below with docker compose
-  const api = 'http://localhost:5000';
+  // const api = 'http://localhost:5000';
 
   // use below with k8s
-  // const api = 'backend';
+  const api = 'backend';
   const [todoTitle, setTodoTitle] = useState('');
   const [todos, setTodos] = useState([]);
   const [isChanges, setIsChanges] = useState(false);
