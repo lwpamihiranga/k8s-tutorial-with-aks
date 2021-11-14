@@ -8,7 +8,7 @@ let mongoUrlK8s = `mongodb://${process.env.DB_URL}/multi-tier-docker-db`;
 
 const db = async () => {
   try {
-    const connection = await mongoose.connect(mongoUrlDockerCompose, {
+    const connection = await mongoose.connect(mongoUrlK8s, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
