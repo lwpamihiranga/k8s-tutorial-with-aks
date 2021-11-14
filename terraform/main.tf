@@ -19,3 +19,12 @@ resource "azurerm_resource_group" "arg" {
   location = "eastus"
 }
 
+# Create ACR
+resource "azurerm_container_registry" "acr" {
+  name                = "lwpamihiranga"
+  resource_group_name = azurerm_resource_group.arg.name
+  location            = azurerm_resource_group.arg.location
+  sku                 = "Basic"
+  admin_enabled       = false
+}
+
